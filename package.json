@@ -34,7 +34,7 @@
     "@types/seedrandom": "3.0.8",
     "@vitejs/plugin-react": "5.1.2",
     "oxlint": "^1.81.0",
-    "prettier": "4.0.0-alpha.13",
+    "prettier": "3.9.6",
     "typescript": "~6.0.2",
     "vite": "7.3.6",
     "vitest": "4.1.11"

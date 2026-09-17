@@ -174,14 +174,12 @@ export default function App() {
   const openControls = () => {
     setInspectorMode('controls')
     if (window.innerWidth < 1180)
-      document
-        .getElementById('inspector')
-        ?.scrollIntoView({
-          behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
-            ? 'instant'
-            : 'smooth',
-          block: 'start',
-        })
+      document.getElementById('inspector')?.scrollIntoView({
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+          ? 'instant'
+          : 'smooth',
+        block: 'start',
+      })
   }
   const connect = (source: string, target: string) =>
     update({ ...scenario, edges: [...scenario.edges, { source, target }] })

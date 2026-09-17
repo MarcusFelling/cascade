@@ -3,8 +3,7 @@ import { comparisonScenario } from './sharing'
 import type { Scenario } from './schema'
 
 export type WorkerResponse =
-  | { result: SimulationResult; comparison: SimulationResult }
-  | { error: string }
+  { result: SimulationResult; comparison: SimulationResult } | { error: string }
 
 self.onmessage = (event: MessageEvent<Scenario>) => {
   try {
