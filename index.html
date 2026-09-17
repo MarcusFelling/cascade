@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="%BASE_URL%favicon.png" />
+    <meta
+      name="description"
+      content="A browser-based distributed systems lab. Inject failures, replay incidents, and compare resilience strategies with a deterministic simulation."
+    />
+    <meta name="theme-color" content="#b11f4b" />
+    <title>Cascade | Distributed Systems Lab</title>
+    <script>
+      ;(() => {
+        const param = new URLSearchParams(window.location.search).get('scoutTheme')
+        const theme =
+          param || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+        document.documentElement.setAttribute('data-theme', theme === 'dark' ? 'dark' : 'light')
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
